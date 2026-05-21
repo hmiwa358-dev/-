@@ -5,6 +5,7 @@ import { INITIAL_STORES } from './constants';
 import { StoreInfo, FuelType } from './types';
 import PriceBoard from './components/PriceBoard';
 import ServiceCard from './components/ServiceCard';
+import InstagramReelSearch from './components/InstagramReelSearch';
 
 const App: React.FC = () => {
   const [stores, setStores] = useState<StoreInfo[]>(() => {
@@ -439,6 +440,9 @@ const App: React.FC = () => {
           )}
         </div>
       </section>
+
+      {/* Instagram Reel Search */}
+      <InstagramReelSearch />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-32 mt-auto relative overflow-hidden">
