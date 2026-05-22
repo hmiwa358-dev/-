@@ -23,3 +23,16 @@ export interface StoreInfo {
 export interface AppState {
   stores: StoreInfo[];
 }
+
+export type ArticleCategory = 'service' | 'price' | 'seasonal' | 'local' | 'campaign';
+
+export interface NoteArticle {
+  id: string;
+  title: string;
+  content: string;
+  tags: string[];
+  status: 'draft' | 'published';
+  category: ArticleCategory;
+  createdAt: string;
+  updatedAt: string;
+}
