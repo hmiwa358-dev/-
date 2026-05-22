@@ -5,6 +5,7 @@ import { INITIAL_STORES } from './constants';
 import { StoreInfo, FuelType } from './types';
 import PriceBoard from './components/PriceBoard';
 import ServiceCard from './components/ServiceCard';
+import NoteArticlePage from './components/NoteArticlePage';
 
 const App: React.FC = () => {
   const [stores, setStores] = useState<StoreInfo[]>(() => {
@@ -13,6 +14,7 @@ const App: React.FC = () => {
   });
   const [isAdminMode, setIsAdminMode] = useState(false);
   const [showAdminConfirm, setShowAdminConfirm] = useState(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'articles'>('home');
   const [mgmtUnlocked, setMgmtUnlocked] = useState(() => {
     return localStorage.getItem('yoshino_mgmt_unlocked') === 'true';
   });
@@ -144,6 +146,10 @@ const App: React.FC = () => {
     }
   };
 
+  if (currentPage === 'articles') {
+    return <NoteArticlePage onBack={() => setCurrentPage('home')} />;
+  }
+
   return (
     <div className="min-h-screen flex flex-col font-['Noto_Sans_JP'] bg-white">
       {/* Header */}
@@ -167,9 +173,17 @@ const App: React.FC = () => {
             <a href="#delivery" className="text-gray-600 hover:text-red-600 transition-colors">Delivery</a>
             <a href="#stores" className="text-gray-600 hover:text-red-600 transition-colors">Access</a>
           </nav>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
+            {isAdminMode && (
+              <button
+                onClick={() => setCurrentPage('articles')}
+                className="px-4 py-2 rounded-full text-[10px] font-black tracking-widest bg-gray-900 text-white hover:bg-gray-700 transition-all animate-fadeIn"
+              >
+                NOTE記事
+              </button>
+            )}
             {mgmtUnlocked && (
-              <button 
+              <button
                 onClick={() => setShowAdminConfirm(true)}
                 className={`px-4 py-2 rounded-full text-[10px] font-black tracking-widest transition-all animate-fadeIn ${
                   isAdminMode ? 'bg-red-600 text-white shadow-inner' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
