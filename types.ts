@@ -1,4 +1,3 @@
-
 export type FuelType = 'regular' | 'diesel';
 
 export interface FuelPrice {
@@ -14,10 +13,18 @@ export interface StoreInfo {
   address: string;
   tel: string;
   hours: string;
-  description?: string; // Landmark or feature (e.g., "Next to post office")
+  description?: string;
   mapUrl: string;
+  externalMapUrl?: string;
   prices: Record<FuelType, number>;
-  fireCorpsDiscount: Record<FuelType, number>; // Discount amount (e.g., 7 means 7 yen off)
+  fireCorpsDiscount: Record<FuelType, number>;
+}
+
+export interface NewsItem {
+  id: string;
+  date: string;
+  content: string;
+  category: 'important' | 'normal';
 }
 
 export interface AppState {
