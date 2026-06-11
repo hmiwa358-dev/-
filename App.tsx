@@ -31,6 +31,7 @@ const App: React.FC = () => {
 
   // Image optimization state
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+  const [saveToast, setSaveToast] = useState(false);
 
   // 管理モード設定
   const SECRET_CODE = (typeof process !== 'undefined' ? process.env?.ADMIN_PASSWORD : undefined) || import.meta.env.VITE_ADMIN_PASSWORD || "ty226808";
@@ -61,6 +62,8 @@ const App: React.FC = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ stores: updatedStores, news: updatedNews }),
       });
+      setSaveToast(true);
+      setTimeout(() => setSaveToast(false), 2000);
     } catch (err) {
       console.error("Save error:", err);
     }
@@ -98,19 +101,27 @@ const App: React.FC = () => {
   };
 
   const handlePriceUpdate = (storeId: string, type: FuelType, newPrice: number) => {
-    setStores(prev => prev.map(store =>
-      store.id === storeId
-        ? { ...store, prices: { ...store.prices, [type]: newPrice } }
-        : store
-    ));
+    setStores(prev => {
+      const updated = prev.map(store =>
+        store.id === storeId
+          ? { ...store, prices: { ...store.prices, [type]: newPrice } }
+          : store
+      );
+      saveData(updated, newsList);
+      return updated;
+    });
   };
 
   const handleDiscountUpdate = (storeId: string, type: FuelType, newDiscount: number) => {
-    setStores(prev => prev.map(store =>
-      store.id === storeId
-        ? { ...store, fireCorpsDiscount: { ...store.fireCorpsDiscount, [type]: newDiscount } }
-        : store
-    ));
+    setStores(prev => {
+      const updated = prev.map(store =>
+        store.id === storeId
+          ? { ...store, fireCorpsDiscount: { ...store.fireCorpsDiscount, [type]: newDiscount } }
+          : store
+      );
+      saveData(updated, newsList);
+      return updated;
+    });
   };
 
   const filteredStores = useMemo(() => {
@@ -155,7 +166,6 @@ const App: React.FC = () => {
       setIsAdminMode(false);
       setShowAdminConfirm(false);
       setAdminPassword('');
-      saveData(stores, newsList); // 終了時に保存
       return;
     }
 
@@ -185,6 +195,7 @@ const App: React.FC = () => {
     };
     const updated = [newItem, ...newsList]; // 新しいものを上に
     setNewsList(updated);
+    saveData(stores, updated);
     setNewNewsContent('');
     setNewNewsCategory('normal');
   };
@@ -193,6 +204,7 @@ const App: React.FC = () => {
   const deleteNews = (id: string) => {
     const updated = newsList.filter(item => item.id !== id);
     setNewsList(updated);
+    saveData(stores, updated);
   };
 
   // 表示用リスト（最新5件 or 全件）
@@ -770,6 +782,16 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {/* Save Toast */}
+      {saveToast && (
+        <div className="fixed bottom-6 right-6 z-[200] bg-gray-900 text-white text-sm font-black px-6 py-3 rounded-2xl shadow-2xl flex items-center space-x-2 animate-fadeIn border border-white/10">
+          <svg className="w-4 h-4 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+          </svg>
+          <span>保存しました</span>
+        </div>
+      )}
 
       {/* Admin Confirmation Modal with Password */}
       {showAdminConfirm && (
