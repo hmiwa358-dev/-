@@ -17,39 +17,74 @@ h2.title{font-size:24px;margin-bottom:6px}.eyebrow{font-family:sans-serif;font-s
 .hero .mark{background:linear-gradient(transparent 62%,rgba(232,181,58,.45) 62%)}.hero p.sub{font-size:15px;color:#fde9dc;margin-bottom:24px}
 .hero .btn{background:var(--gold);color:var(--deep)}.hero .btn.outline{background:transparent;color:#fff;border-color:#fff}
 .hero .cta-row{display:flex;flex-direction:column;gap:12px}.salon{font-family:sans-serif;font-size:13px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:14px}
-.reasons{background:var(--card)}.reason{border-top:1px solid var(--line);padding:24px 0;display:flex;gap:16px}.reason:last-child{border-bottom:1px solid var(--line)}
-.rnum{font-family:sans-serif;font-weight:800;font-size:13px;color:#fff;background:var(--red);border:2px solid var(--gold);width:40px;height:40px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
-.reason h3{font-size:17px;margin-bottom:5px}.reason p{font-size:14px;color:#6b4a40}
-.menu-item{border:1px solid var(--line);border-left:6px solid var(--red);border-radius:14px;padding:18px 20px;margin-bottom:12px;background:var(--card)}
+.reasons{background:var(--card)}.menu-item{border:1px solid var(--line);border-left:6px solid var(--red);border-radius:14px;padding:18px 20px;margin-bottom:12px;background:var(--card)}
 .menu-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}.menu-head h3{font-size:17px}
 .price{font-family:sans-serif;font-weight:800;color:var(--red);font-size:17px;white-space:nowrap}.menu-item p{font-size:14px;color:#6b4a40;margin-top:6px}
 .faq details{border-bottom:1px solid var(--line)}.faq summary{list-style:none;cursor:pointer;padding:16px 30px;position:relative;font-size:15px;font-weight:700;font-family:sans-serif}
 .faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"Q";position:absolute;left:0;top:16px;color:var(--red);font-weight:800}
 .faq .a{padding:0 4px 16px 30px;font-size:14px;color:#6b4a40}
-.insta-frame{margin-top:22px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-.insta-frame iframe{display:block;width:100%;height:560px;border:0}
+.insta-card{margin-top:22px;display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.insta-icon{width:48px;height:48px;border-radius:14px;flex:0 0 auto;background:radial-gradient(circle at 30% 110%,#fdd76b 0 25%,#f2643c 45%,#d6247b 65%,#7a3fd1 90%);display:flex;align-items:center;justify-content:center}
+.insta-card strong{display:block;font-family:sans-serif;font-size:16px}.insta-card span{font-size:13px;color:#6b4a40}
+.insta-posts{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}.insta-posts:empty{display:none}
+.insta-posts .instagram-media{min-width:0!important;width:100%!important;margin:0!important}
 .insta-link{margin-top:16px;width:100%}
+.ph{position:relative;overflow:hidden;border-radius:12px;background:repeating-linear-gradient(45deg,#f3e3cc 0 10px,#efdcc1 10px 20px);border:1.5px dashed #d3b38e}
+.ph::before{content:attr(data-label) "\A" attr(data-size);white-space:pre;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:sans-serif;font-size:13px;font-weight:700;color:#a07c58;padding:8px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph.menu-board{aspect-ratio:4/5}.ph.photo{aspect-ratio:1/1}
+.menu-boards{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:16px}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.access-info{margin-top:18px;font-size:15px}.access-info dt{font-family:sans-serif;font-size:12px;font-weight:700;color:var(--red);letter-spacing:.15em}.access-info dd{margin-bottom:10px}
+.map{margin-top:16px;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#eee}.map iframe{width:100%;height:100%;border:0;display:block}
 .contact{background:var(--deep);color:#fbf3e6}.contact .eyebrow{color:var(--gold)}.contact h2.title{color:#fff}.contact .lead{color:#f1d6c8}
 .contact-alt{display:flex;flex-direction:column;gap:10px;margin-top:22px}
 footer{background:var(--deep);color:#e0bfb2;text-align:center;font-size:12px;padding:24px 0 34px;font-family:sans-serif}
 .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(251,243,230,.96);border-top:3px solid var(--red);padding:10px 16px;display:flex;gap:10px}.sticky .btn{flex:1;font-size:15px;padding:12px 10px}
-@media(min-width:600px){.hero h1{font-size:36px}.hero .cta-row{flex-direction:row}.insta-frame iframe{height:680px}}
+@media(min-width:600px){.hero h1{font-size:36px}.hero .cta-row{flex-direction:row}.menu-boards{grid-template-columns:1fr 1fr}.photos{grid-template-columns:repeat(3,1fr)}.insta-posts{grid-template-columns:1fr 1fr}.map{aspect-ratio:16/9}}
 </style></head><body>
 <header class="hero"><span class="circle c1"></span><span class="circle c2"></span><div class="wrap hero-inner"><div class="salon">沖縄県南城市大里</div>
 <h1><span class="mark">あなたの「世界」が、「ワイワイ」広がる。路地裏の小さな秘密基地。</span></h1><p class="sub">お酒がすきな20歳以上のためのバーです。お気軽にお立ち寄りください。</p>
 <div class="cta-row"><a class="btn" href="#contact">お問い合わせ</a><a class="btn outline" href="#menu">メニューを見る</a></div></div></header>
 <div class="minsa"></div>
-<section class="reasons"><div class="wrap"><span class="eyebrow">WHY CHOSEN</span><h2 class="title">ワイワイワールドが選ばれる理由</h2><div style="margin-top:22px"><div class="reason"><div class="rnum">01</div><div><h3>4時まで営業中</h3><p>夜おそくまで開いています。仕事帰りや2軒目にも立ち寄れます。</p></div></div><div class="reason"><div class="rnum">02</div><div><h3>カラオケが楽しめる</h3><p>お酒を飲みながら、好きな歌を楽しめます。</p></div></div><div class="reason"><div class="rnum">03</div><div><h3>居心地がいい店内</h3><p>路地裏の小さなお店です。ゆっくりくつろげます。</p></div></div></div></div></section>
-<section id="menu"><div class="wrap"><span class="eyebrow">MENU</span><h2 class="title">メニュー</h2><div style="margin-top:22px"><div class="menu-item"><div class="menu-head"><h3>ドリンク・カラオケ</h3><span class="price">お問い合わせ</span></div><p>料金はお電話でお問い合わせください。</p></div></div></div></section>
-<section class="reasons"><div class="wrap faq"><span class="eyebrow">FAQ</span><h2 class="title">よくある質問</h2><div style="margin-top:16px">
+<section class="reasons" id="instagram"><div class="wrap"><span class="eyebrow">INSTAGRAM</span><h2 class="title">最新の投稿</h2>
+<a class="insta-card" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="insta-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span><div><strong>@wy.wy._world</strong><span>お店の最新情報はInstagramで発信しています</span></div></a>
+<div class="insta-posts" id="insta-posts"></div>
+<a class="btn insta-link" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener">Instagramを見る</a></div></section>
+<section id="menu"><div class="wrap"><span class="eyebrow">MENU</span><h2 class="title">メニュー</h2><div style="margin-top:22px">
+<div class="menu-boards"><div class="ph menu-board" data-label="メニュー画像1" data-size="1080×1350px（縦長）"><img src="images/menu-1.jpg" alt="メニュー画像1" loading="lazy" onerror="this.remove()"></div><div class="ph menu-board" data-label="メニュー画像2" data-size="1080×1350px（縦長）"><img src="images/menu-2.jpg" alt="メニュー画像2" loading="lazy" onerror="this.remove()"></div></div>
+<div class="menu-item"><div class="menu-head"><h3>ドリンク・カラオケ</h3><span class="price">お問い合わせ</span></div><p>料金はお電話でお問い合わせください。</p></div></div></div></section>
+<section class="reasons" id="photo"><div class="wrap"><span class="eyebrow">PHOTO</span><h2 class="title">写真</h2>
+<div class="photos"><div class="ph photo" data-label="写真1" data-size="1080×1080px（正方形）"><img src="images/photo-1.jpg" alt="写真1" loading="lazy" onerror="this.remove()"></div><div class="ph photo" data-label="写真2" data-size="1080×1080px（正方形）"><img src="images/photo-2.jpg" alt="写真2" loading="lazy" onerror="this.remove()"></div><div class="ph photo" data-label="写真3" data-size="1080×1080px（正方形）"><img src="images/photo-3.jpg" alt="写真3" loading="lazy" onerror="this.remove()"></div><div class="ph photo" data-label="写真4" data-size="1080×1080px（正方形）"><img src="images/photo-4.jpg" alt="写真4" loading="lazy" onerror="this.remove()"></div><div class="ph photo" data-label="写真5" data-size="1080×1080px（正方形）"><img src="images/photo-5.jpg" alt="写真5" loading="lazy" onerror="this.remove()"></div><div class="ph photo" data-label="写真6" data-size="1080×1080px（正方形）"><img src="images/photo-6.jpg" alt="写真6" loading="lazy" onerror="this.remove()"></div></div></div></section>
+<section><div class="wrap faq"><span class="eyebrow">FAQ</span><h2 class="title">よくある質問</h2><div style="margin-top:16px">
 <details open><summary>初めてでも大丈夫ですか？</summary><div class="a">はい。初めての方も、お気軽にお越しください。</div></details>
 <details><summary>何歳から入れますか？</summary><div class="a">20歳以上の方のみご利用いただけます。</div></details>
 <details><summary>予約は必要ですか？</summary><div class="a">詳しくはお電話でお問い合わせください。</div></details>
 <details><summary>支払い方法は？</summary><div class="a">現金のみご利用いただけます。</div></details></div></div></section>
-<section id="instagram"><div class="wrap"><span class="eyebrow">INSTAGRAM</span><h2 class="title">最新の投稿</h2><p class="lead">Instagram <a href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener" style="color:var(--red)">@wy.wy._world</a></p><div class="insta-frame"><iframe src="https://www.instagram.com/wy.wy._world/embed" title="ワイワイワールドのInstagram" loading="lazy"></iframe></div><a class="btn insta-link" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener">Instagramを見る</a></div></section>
+<section class="reasons" id="access"><div class="wrap"><span class="eyebrow">ACCESS</span><h2 class="title">アクセス</h2>
+<dl class="access-info"><dt>住所</dt><dd>〒901-1204 沖縄県南城市大里稲嶺2013-25</dd><dt>電話</dt><dd><a href="tel:0989450006" style="color:inherit">098-945-0006</a></dd></dl>
+<div class="map"><iframe src="https://maps.google.com/maps?q=%E6%B2%96%E7%B8%84%E7%9C%8C%E5%8D%97%E5%9F%8E%E5%B8%82%E5%A4%A7%E9%87%8C%E7%A8%B2%E5%B6%BA2013-25&amp;z=17&amp;output=embed" title="ワイワイワールドの地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<a class="btn insta-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B2%96%E7%B8%84%E7%9C%8C%E5%8D%97%E5%9F%8E%E5%B8%82%E5%A4%A7%E9%87%8C%E7%A8%B2%E5%B6%BA2013-25" target="_blank" rel="noopener">Googleマップで開く</a></div></section>
 <div class="minsa"></div>
 <section class="contact" id="contact"><div class="wrap"><span class="eyebrow">CONTACT</span><h2 class="title">お問い合わせ</h2>
-<p class="lead">料金や空き状況など、お気軽にお電話ください。</p><div class="contact-alt"><a class="btn outline" href="tel:0989450006" style="color:#fff;border-color:#b9c3a6">電話する 098-945-0006</a></div></div></section>
-<footer>ワイワイワールド　沖縄県南城市大里</footer>
+<p class="lead">料金や空き状況など、お気軽にお電話ください。</p><div class="contact-alt"><a class="btn outline" href="tel:0989450006" style="color:#fff;border-color:#fff">電話する 098-945-0006</a></div></div></section>
+<footer>ワイワイワールド<br>〒901-1204 沖縄県南城市大里稲嶺2013-25</footer>
 <div class="sticky"><a class="btn outline" href="tel:0989450006">電話</a><a class="btn" href="#contact">お問い合わせ</a></div>
+<script>
+/* Instagramに載せたい投稿のURLを、ここに入れてください（上から順に表示されます）
+   例: "https://www.instagram.com/p/XXXXXXXXXXX/" */
+var INSTAGRAM_POSTS = [
+];
+(function(){
+  var box=document.getElementById("insta-posts");
+  if(!INSTAGRAM_POSTS.length) return;
+  INSTAGRAM_POSTS.forEach(function(url){
+    var q=document.createElement("blockquote");
+    q.className="instagram-media";q.setAttribute("data-instgrm-permalink",url);q.setAttribute("data-instgrm-version","14");
+    var a=document.createElement("a");a.href=url;a.target="_blank";a.rel="noopener";a.textContent="Instagramで見る";
+    q.appendChild(a);box.appendChild(q);
+  });
+  var sc=document.createElement("script");sc.async=true;sc.src="https://www.instagram.com/embed.js";document.body.appendChild(sc);
+})();
+</script>
 </body></html>
