@@ -1,43 +1,53 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ワイワイワールド</title>
 <style>
-:root{--paper:#f4efe7;--ink:#322f2b;--sage:#6f7f5e;--card:#faf7f1;--line:#e3dccf}
+:root{--paper:#fbf3e6;--ink:#3a1d17;--red:#b5262b;--deep:#7d1a1e;--gold:#e8b53a;--sea:#1f8a9e;--card:#fffaf1;--line:#ecd9c0}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;color:var(--ink);background:var(--paper);line-height:1.9;padding-bottom:74px}
 .wrap{max-width:720px;margin:0 auto;padding:0 22px}section{padding:60px 0}
-h2.title{font-size:24px;margin-bottom:6px}.eyebrow{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:var(--sage);font-weight:700;margin-bottom:12px;display:block}
-.lead{font-size:15px;color:#5f5b53}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--sage);color:#fff;font-family:sans-serif;font-weight:700;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:999px}
-.btn.outline{background:transparent;color:var(--sage);border:1.5px solid var(--sage)}
-.hero{position:relative;overflow:hidden;padding:64px 0}.hero .circle{position:absolute;border-radius:50%;background:var(--sage);opacity:.10}
-.hero .c1{width:240px;height:240px;top:-70px;right:-60px}.hero .c2{width:140px;height:140px;bottom:-40px;left:-40px;opacity:.08}
+h2.title{font-size:24px;margin-bottom:6px}.eyebrow{font-family:sans-serif;font-size:12px;letter-spacing:.3em;color:var(--red);font-weight:700;margin-bottom:12px;display:block}
+.lead{font-size:15px;color:#6b4a40}
+.minsa{height:18px;background-color:var(--deep);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='18'%3E%3Cg fill='%23e8b53a'%3E%3Crect x='4' y='5' width='6' height='8'/%3E%3Crect x='12' y='5' width='6' height='8'/%3E%3Crect x='20' y='5' width='6' height='8'/%3E%3Crect x='28' y='5' width='6' height='8'/%3E%3Crect x='36' y='5' width='6' height='8'/%3E%3Crect x='56' y='5' width='6' height='8'/%3E%3Crect x='64' y='5' width='6' height='8'/%3E%3Crect x='72' y='5' width='6' height='8'/%3E%3Crect x='80' y='5' width='6' height='8'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-x;background-position:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff;font-family:sans-serif;font-weight:700;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:999px}
+.btn.outline{background:transparent;color:var(--red);border:1.5px solid var(--red)}
+.hero{position:relative;overflow:hidden;padding:64px 0 84px;background:var(--red);color:#fff}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:radial-gradient(circle at 50% 0,transparent 13px,var(--paper) 14px) 0 0/28px 26px repeat-x}
+.hero .circle{position:absolute;border-radius:50%;background:var(--gold);opacity:.18}
+.hero .c1{width:240px;height:240px;top:-70px;right:-60px}.hero .c2{width:140px;height:140px;bottom:-30px;left:-40px;background:var(--sea);opacity:.25}
 .hero-inner{position:relative}.hero h1{font-size:30px;line-height:1.5;margin-bottom:16px}
-.hero .mark{background:linear-gradient(transparent 62%,rgba(111,127,94,.22) 62%)}.hero p.sub{font-size:15px;color:#5f5b53;margin-bottom:24px}
-.hero .cta-row{display:flex;flex-direction:column;gap:12px}.salon{font-family:sans-serif;font-size:13px;letter-spacing:.2em;color:var(--sage);font-weight:700;margin-bottom:14px}
+.hero .mark{background:linear-gradient(transparent 62%,rgba(232,181,58,.45) 62%)}.hero p.sub{font-size:15px;color:#fde9dc;margin-bottom:24px}
+.hero .btn{background:var(--gold);color:var(--deep)}.hero .btn.outline{background:transparent;color:#fff;border-color:#fff}
+.hero .cta-row{display:flex;flex-direction:column;gap:12px}.salon{font-family:sans-serif;font-size:13px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:14px}
 .reasons{background:var(--card)}.reason{border-top:1px solid var(--line);padding:24px 0;display:flex;gap:16px}.reason:last-child{border-bottom:1px solid var(--line)}
-.rnum{font-family:sans-serif;font-weight:800;font-size:13px;color:#fff;background:var(--sage);width:38px;height:38px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
-.reason h3{font-size:17px;margin-bottom:5px}.reason p{font-size:14px;color:#5f5b53}
-.menu-item{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:12px;background:var(--card)}
+.rnum{font-family:sans-serif;font-weight:800;font-size:13px;color:#fff;background:var(--red);border:2px solid var(--gold);width:40px;height:40px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.reason h3{font-size:17px;margin-bottom:5px}.reason p{font-size:14px;color:#6b4a40}
+.menu-item{border:1px solid var(--line);border-left:6px solid var(--red);border-radius:14px;padding:18px 20px;margin-bottom:12px;background:var(--card)}
 .menu-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}.menu-head h3{font-size:17px}
-.price{font-family:sans-serif;font-weight:800;color:var(--sage);font-size:17px;white-space:nowrap}.menu-item p{font-size:14px;color:#5f5b53;margin-top:6px}
+.price{font-family:sans-serif;font-weight:800;color:var(--red);font-size:17px;white-space:nowrap}.menu-item p{font-size:14px;color:#6b4a40;margin-top:6px}
 .faq details{border-bottom:1px solid var(--line)}.faq summary{list-style:none;cursor:pointer;padding:16px 30px;position:relative;font-size:15px;font-weight:700;font-family:sans-serif}
-.faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"Q";position:absolute;left:0;top:16px;color:var(--sage);font-weight:800}
-.faq .a{padding:0 4px 16px 30px;font-size:14px;color:#5f5b53}
-.contact{background:var(--ink);color:#f4efe7}.contact .eyebrow{color:#b9c3a6}.contact h2.title{color:#fff}.contact .lead{color:#cfcabf}
+.faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"Q";position:absolute;left:0;top:16px;color:var(--red);font-weight:800}
+.faq .a{padding:0 4px 16px 30px;font-size:14px;color:#6b4a40}
+.insta-frame{margin-top:22px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.insta-frame iframe{display:block;width:100%;height:560px;border:0}
+.insta-link{margin-top:16px;width:100%}
+.contact{background:var(--deep);color:#fbf3e6}.contact .eyebrow{color:var(--gold)}.contact h2.title{color:#fff}.contact .lead{color:#f1d6c8}
 .contact-alt{display:flex;flex-direction:column;gap:10px;margin-top:22px}
-footer{background:var(--ink);color:#9a958b;text-align:center;font-size:12px;padding:24px 0 34px;font-family:sans-serif}
-.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(244,239,231,.95);border-top:1px solid var(--line);padding:10px 16px;display:flex;gap:10px}.sticky .btn{flex:1;font-size:15px;padding:12px 10px}
-@media(min-width:600px){.hero h1{font-size:36px}.hero .cta-row{flex-direction:row}}
+footer{background:var(--deep);color:#e0bfb2;text-align:center;font-size:12px;padding:24px 0 34px;font-family:sans-serif}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(251,243,230,.96);border-top:3px solid var(--red);padding:10px 16px;display:flex;gap:10px}.sticky .btn{flex:1;font-size:15px;padding:12px 10px}
+@media(min-width:600px){.hero h1{font-size:36px}.hero .cta-row{flex-direction:row}.insta-frame iframe{height:680px}}
 </style></head><body>
 <header class="hero"><span class="circle c1"></span><span class="circle c2"></span><div class="wrap hero-inner"><div class="salon">沖縄県南城市大里</div>
 <h1><span class="mark">あなたの「世界」が、「ワイワイ」広がる。路地裏の小さな秘密基地。</span></h1><p class="sub">お酒がすきな20歳以上のためのバーです。お気軽にお立ち寄りください。</p>
 <div class="cta-row"><a class="btn" href="#contact">お問い合わせ</a><a class="btn outline" href="#menu">メニューを見る</a></div></div></header>
+<div class="minsa"></div>
 <section class="reasons"><div class="wrap"><span class="eyebrow">WHY CHOSEN</span><h2 class="title">ワイワイワールドが選ばれる理由</h2><div style="margin-top:22px"><div class="reason"><div class="rnum">01</div><div><h3>4時まで営業中</h3><p>夜おそくまで開いています。仕事帰りや2軒目にも立ち寄れます。</p></div></div><div class="reason"><div class="rnum">02</div><div><h3>カラオケが楽しめる</h3><p>お酒を飲みながら、好きな歌を楽しめます。</p></div></div><div class="reason"><div class="rnum">03</div><div><h3>居心地がいい店内</h3><p>路地裏の小さなお店です。ゆっくりくつろげます。</p></div></div></div></div></section>
 <section id="menu"><div class="wrap"><span class="eyebrow">MENU</span><h2 class="title">メニュー</h2><div style="margin-top:22px"><div class="menu-item"><div class="menu-head"><h3>ドリンク・カラオケ</h3><span class="price">お問い合わせ</span></div><p>料金はお電話でお問い合わせください。</p></div></div></div></section>
 <section class="reasons"><div class="wrap faq"><span class="eyebrow">FAQ</span><h2 class="title">よくある質問</h2><div style="margin-top:16px">
 <details open><summary>初めてでも大丈夫ですか？</summary><div class="a">はい。初めての方も、お気軽にお越しください。</div></details>
 <details><summary>何歳から入れますか？</summary><div class="a">20歳以上の方のみご利用いただけます。</div></details>
 <details><summary>予約は必要ですか？</summary><div class="a">詳しくはお電話でお問い合わせください。</div></details>
-<details><summary>支払い方法は？</summary><div class="a">詳しくはお問い合わせください。</div></details></div></div></section>
+<details><summary>支払い方法は？</summary><div class="a">現金のみご利用いただけます。</div></details></div></div></section>
+<section id="instagram"><div class="wrap"><span class="eyebrow">INSTAGRAM</span><h2 class="title">最新の投稿</h2><p class="lead">Instagram <a href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener" style="color:var(--red)">@wy.wy._world</a></p><div class="insta-frame"><iframe src="https://www.instagram.com/wy.wy._world/embed" title="ワイワイワールドのInstagram" loading="lazy"></iframe></div><a class="btn insta-link" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener">Instagramを見る</a></div></section>
+<div class="minsa"></div>
 <section class="contact" id="contact"><div class="wrap"><span class="eyebrow">CONTACT</span><h2 class="title">お問い合わせ</h2>
 <p class="lead">料金や空き状況など、お気軽にお電話ください。</p><div class="contact-alt"><a class="btn outline" href="tel:0989450006" style="color:#fff;border-color:#b9c3a6">電話する 098-945-0006</a></div></div></section>
 <footer>ワイワイワールド　沖縄県南城市大里</footer>
