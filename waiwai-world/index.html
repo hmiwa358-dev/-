@@ -43,9 +43,10 @@ h2.title{font-size:24px;margin-bottom:6px}.eyebrow{font-family:sans-serif;font-s
 .access-info{margin-top:18px}.access-info dt{font-size:16px;font-weight:700;color:var(--red)}.access-info dd{font-size:19px;margin-bottom:14px}
 .access-note{font-size:16px;margin-top:4px}
 .today{background:var(--card);border:2px solid var(--red);border-radius:16px;padding:22px 20px;margin-top:18px;text-align:center}
+.shisa{display:block;width:130px;height:auto;margin:0 auto 6px}
 .today-date{font-family:sans-serif;font-size:14px;color:#6b4a40}
 .today-status{font-size:26px;font-weight:700;color:var(--red);margin:4px 0}.today.closed .today-status{color:#6b4a40}
-.today-hours{font-size:16px}.today-note{font-size:13px;color:#6b4a40;margin-top:10px}
+.today-hours{font-size:16px}.today-msg{font-size:15px;margin-top:8px;font-weight:700}.today-note{font-size:13px;color:#6b4a40;margin-top:10px}
 .map{margin-top:16px;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:#eee}.map iframe{width:100%;height:100%;border:0;display:block}
 .contact{background:var(--deep);color:#fbf3e6}.contact .eyebrow{color:var(--gold)}.contact h2.title{color:#fff}.contact .lead{color:#f1d6c8}
 .contact-alt{display:flex;flex-direction:column;gap:10px;margin-top:22px}
@@ -58,8 +59,28 @@ footer{background:var(--deep);color:#e0bfb2;text-align:center;font-size:12px;pad
 <div class="cta-row"><a class="btn" href="#contact">お問い合わせ</a><a class="btn outline" href="#menu">メニューを見る</a></div><div class="slider"><div class="slides"><div class="ph" data-label="スライド写真1" data-size="1200×800px（横長）"><img src="images/slide-1.jpg" alt="店内の写真1" onerror="this.remove()"></div><div class="ph" data-label="スライド写真2" data-size="1200×800px（横長）"><img src="images/slide-2.jpg" alt="店内の写真2" onerror="this.remove()"></div><div class="ph" data-label="スライド写真3" data-size="1200×800px（横長）"><img src="images/slide-3.jpg" alt="店内の写真3" onerror="this.remove()"></div></div><div class="dots"><span></span><span></span><span></span></div></div></div></header>
 <div class="minsa"></div>
 <section id="today"><div class="wrap"><span class="eyebrow">TODAY</span><h2 class="title">本日の営業</h2>
-<div class="today" id="today-box"><div class="today-date" id="today-date"></div><div class="today-status" id="today-status">営業日：月・火・木・金・土</div><div class="today-hours" id="today-hours">営業時間 20時〜4時</div>
-<p class="today-note">臨時のお休みなど、詳しくはInstagramに載せてます。</p></div></div></section>
+<div class="today" id="today-box"><svg class="shisa" viewBox="0 0 140 130" role="img" aria-label="お酒を持ったシーサー">
+<g fill="#9c3d1c"><circle cx="91.0" cy="46.0" r="9"/><circle cx="87.9" cy="58.6" r="9"/><circle cx="79.3" cy="68.7" r="9"/><circle cx="66.9" cy="74.3" r="9"/><circle cx="53.1" cy="74.3" r="9"/><circle cx="40.7" cy="68.7" r="9"/><circle cx="32.1" cy="58.6" r="9"/><circle cx="29.0" cy="46.0" r="9"/><circle cx="32.1" cy="33.4" r="9"/><circle cx="40.7" cy="23.3" r="9"/><circle cx="53.1" cy="17.7" r="9"/><circle cx="66.9" cy="17.7" r="9"/><circle cx="79.3" cy="23.3" r="9"/><circle cx="87.9" cy="33.4" r="9"/></g>
+<path d="M18 104c0-10 6-16 12-17v-8h8v8c6 1 12 7 12 17 0 9-7 15-16 15s-16-6-16-15z" fill="#f4ead8" stroke="#3a1d17" stroke-width="2"/>
+<path d="M30 79h8v-4h-8z" fill="#b5262b"/><path d="M24 101h20" stroke="#1f8a9e" stroke-width="3"/><path d="M26 107h16" stroke="#1f8a9e" stroke-width="2"/>
+<ellipse cx="66" cy="100" rx="30" ry="22" fill="#d27a3a" stroke="#3a1d17" stroke-width="2"/>
+<rect x="48" y="104" width="13" height="18" rx="6" fill="#d27a3a" stroke="#3a1d17" stroke-width="2"/>
+<rect x="70" y="104" width="13" height="18" rx="6" fill="#d27a3a" stroke="#3a1d17" stroke-width="2"/>
+<path d="M88 92c8-6 14-14 16-24" stroke="#3a1d17" stroke-width="13" stroke-linecap="round" fill="none"/>
+<path d="M88 92c8-6 14-14 16-24" stroke="#d27a3a" stroke-width="9" stroke-linecap="round" fill="none"/>
+<path d="M95 52h22l-4 16h-14z" fill="#fff" stroke="#3a1d17" stroke-width="2" stroke-linejoin="round"/>
+<path d="M97 56h18" stroke="#1f8a9e" stroke-width="3"/>
+<circle cx="104" cy="68" r="7" fill="#d27a3a" stroke="#3a1d17" stroke-width="2"/>
+<circle cx="60" cy="46" r="27" fill="#d27a3a" stroke="#3a1d17" stroke-width="2"/>
+<path d="M40 32q8-8 16-2M64 30q8-6 16 2" stroke="#3a1d17" stroke-width="4" stroke-linecap="round" fill="none"/>
+<circle cx="49" cy="41" r="7" fill="#fff" stroke="#3a1d17" stroke-width="2"/><circle cx="71" cy="41" r="7" fill="#fff" stroke="#3a1d17" stroke-width="2"/>
+<circle cx="51" cy="42" r="3.5" fill="#3a1d17"/><circle cx="69" cy="42" r="3.5" fill="#3a1d17"/>
+<ellipse cx="60" cy="51" rx="7" ry="5" fill="#9c3d1c" stroke="#3a1d17" stroke-width="2"/>
+<path d="M44 58q16 16 32 0z" fill="#7d1a1e" stroke="#3a1d17" stroke-width="2" stroke-linejoin="round"/>
+<path d="M47 59l3 4 3-4 4 4 3-4 3 4 4-4 3 4 3-4" stroke="#fff" stroke-width="2" fill="none"/>
+<ellipse cx="40" cy="54" rx="5" ry="3" fill="#e8b53a" opacity=".7"/><ellipse cx="80" cy="54" rx="5" ry="3" fill="#e8b53a" opacity=".7"/>
+</svg><div class="today-date" id="today-date"></div><div class="today-status" id="today-status">営業日：月・火・木・金・土</div><div class="today-hours" id="today-hours">営業時間 20時〜4時</div>
+<p class="today-msg" id="today-msg" hidden></p><p class="today-note">臨時のお休みなど、詳しくはInstagramに載せてます。</p></div></div></section>
 <section class="reasons" id="instagram"><div class="wrap"><span class="eyebrow">INSTAGRAM</span><h2 class="title">最新の投稿</h2>
 <a class="insta-card" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="insta-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span><div><strong>@wy.wy._world</strong><span>お店の最新情報はInstagramで発信しています</span></div></a>
 <div class="insta-posts" id="insta-posts"></div>
@@ -84,20 +105,56 @@ footer{background:var(--deep);color:#e0bfb2;text-align:center;font-size:12px;pad
 <div class="sticky"><a class="btn outline" href="tel:0989450006">電話</a><a class="btn" href="#contact">お問い合わせ</a></div>
 <script>
 /* 本日の営業（日本時間で計算。0時〜4時は前の日の営業として扱う） */
+/* 臨時休業は Google スプレッドシート「ワイワイワールド 臨時休業」のA列（日付）とB列（お知らせ）から読み込む */
+var CLOSURE_SHEET_ID="19nW6-CsAWVKH8_es7UjtF0d_L1PuSnYQFaceXJrTvWE";
 (function(){
   var OPEN_DAYS=[1,2,4,5,6]; /* 0=日 1=月 2=火 3=水 4=木 5=金 6=土 */
   var W="日月火水木金土";
   var jst=new Date(Date.now()+9*3600000);
   var day=jst.getUTCDay(), hour=jst.getUTCHours();
-  var box=document.getElementById("today-box");
-  document.getElementById("today-date").textContent=(jst.getUTCMonth()+1)+"月"+jst.getUTCDate()+"日（"+W[day]+"）";
-  var st=document.getElementById("today-status"), hr=document.getElementById("today-hours");
-  var prev=(day+6)%7;
-  if(hour<4 && OPEN_DAYS.indexOf(prev)>=0){st.textContent="ただいま営業中";hr.textContent="4時まで営業しています";}
-  else if(OPEN_DAYS.indexOf(day)>=0){
-    if(hour>=20){st.textContent="ただいま営業中";hr.textContent="明日の4時まで営業しています";}
-    else{st.textContent="本日は営業日です";hr.textContent="営業時間 20時〜4時";}
-  }else{box.className+=" closed";st.textContent="本日は定休日です";hr.textContent="定休日：水・日";}
+  var y=jst.getUTCFullYear(), m=jst.getUTCMonth()+1, d=jst.getUTCDate();
+  var pj=new Date(jst.getTime()-86400000), prevKey=pj.getUTCFullYear()+"-"+(pj.getUTCMonth()+1)+"-"+pj.getUTCDate();
+  var todayKey=y+"-"+m+"-"+d, prev=(day+6)%7;
+  var box=document.getElementById("today-box"), st=document.getElementById("today-status"),
+      hr=document.getElementById("today-hours"), msg=document.getElementById("today-msg");
+  document.getElementById("today-date").textContent=m+"月"+d+"日（"+W[day]+"）";
+  function render(closed){
+    box.className="today"; msg.hidden=true;
+    if(hour<4 && OPEN_DAYS.indexOf(prev)>=0 && !(prevKey in closed)){st.textContent="ただいま営業中";hr.textContent="4時まで営業しています";return;}
+    if(todayKey in closed){
+      box.className="today closed";st.textContent="本日は臨時休業です";hr.textContent="";
+      if(closed[todayKey]){msg.textContent=closed[todayKey];msg.hidden=false;}
+      return;
+    }
+    if(OPEN_DAYS.indexOf(day)>=0){
+      if(hour>=20){st.textContent="ただいま営業中";hr.textContent="明日の4時まで営業しています";}
+      else{st.textContent="本日は営業日です";hr.textContent="営業時間 20時〜4時";}
+    }else{box.className="today closed";st.textContent="本日は定休日です";hr.textContent="定休日：水・日";}
+  }
+  function toKey(t){
+    t=String(t).replace(/[０-９]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-0xFEE0);});
+    var n=t.match(/\d+/g); if(!n) return null;
+    if(n.length>=3 && n[0].length===4) return (+n[0])+"-"+(+n[1])+"-"+(+n[2]);
+    if(n.length>=2) return y+"-"+(+n[0])+"-"+(+n[1]);
+    return null;
+  }
+  function parseCSV(text){
+    var rows=[],row=[],f="",q=false;
+    for(var i=0;i<text.length;i++){var c=text[i];
+      if(q){if(c==='"'){if(text[i+1]==='"'){f+='"';i++;}else q=false;}else f+=c;}
+      else if(c==='"')q=true;else if(c===","){row.push(f);f="";}
+      else if(c==="\n"){row.push(f);rows.push(row);row=[];f="";}else if(c!=="\r")f+=c;}
+    if(f||row.length){row.push(f);rows.push(row);}
+    return rows;
+  }
+  render({});
+  fetch("https://docs.google.com/spreadsheets/d/"+CLOSURE_SHEET_ID+"/gviz/tq?tqx=out:csv&_="+Date.now())
+    .then(function(r){if(!r.ok)throw 0;return r.text();})
+    .then(function(t){
+      var closed={};
+      parseCSV(t).forEach(function(r){var k=toKey(r[0]||"");if(k)closed[k]=(r[1]||"").trim();});
+      render(closed);
+    }).catch(function(){});
 })();
 </script>
 <script>
