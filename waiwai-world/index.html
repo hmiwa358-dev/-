@@ -38,8 +38,6 @@ h2.title{font-size:24px;margin-bottom:6px}.eyebrow{font-family:sans-serif;font-s
 .ph{position:relative;overflow:hidden;border-radius:12px;background:repeating-linear-gradient(45deg,#f3e3cc 0 10px,#efdcc1 10px 20px);border:1.5px dashed #d3b38e}
 .ph::before{content:attr(data-label) "\A" attr(data-size);white-space:pre;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-family:sans-serif;font-size:13px;font-weight:700;color:#a07c58;padding:8px}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.ph.menu-board{aspect-ratio:4/5}
-.menu-boards{display:grid;grid-template-columns:1fr;gap:12px}
 .access-info{margin-top:18px}.access-info dt{font-size:16px;font-weight:700;color:var(--red)}.access-info dd{font-size:19px;margin-bottom:14px}
 .access-note{font-size:16px;margin-top:4px}
 .today{background:var(--card);border:2px solid var(--red);border-radius:16px;padding:22px 14px;margin-top:18px;text-align:center}
@@ -53,11 +51,11 @@ h2.title{font-size:24px;margin-bottom:6px}.eyebrow{font-family:sans-serif;font-s
 .contact-alt{display:flex;flex-direction:column;gap:10px;margin-top:22px}
 footer{background:var(--deep);color:#e0bfb2;text-align:center;font-size:12px;padding:24px 0 34px;font-family:sans-serif}
 .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(251,243,230,.96);border-top:3px solid var(--red);padding:10px 16px;display:flex;gap:10px}.sticky .btn{flex:1;font-size:15px;padding:12px 10px}
-@media(min-width:600px){.hero h1{font-size:36px}.hero .cta-row{flex-direction:row}.menu-boards{grid-template-columns:1fr 1fr}.insta-posts{grid-template-columns:1fr 1fr}.map{aspect-ratio:16/9}}
+@media(min-width:600px){.hero h1{font-size:36px}.hero .cta-row{flex-direction:row}.insta-posts{grid-template-columns:1fr 1fr}.map{aspect-ratio:16/9}}
 </style></head><body>
 <header class="hero"><span class="circle c1"></span><span class="circle c2"></span><div class="wrap hero-inner"><div class="salon">沖縄県南城市大里</div>
 <h1><span class="mark">あなたの「世界」が、「ワイワイ」広がる。路地裏の小さな秘密基地。</span></h1><p class="sub">お酒がすきな20歳以上のためのバーです。お気軽にお立ち寄りください。</p>
-<div class="cta-row"><a class="btn" href="#contact">お問い合わせ</a><a class="btn outline" href="#menu">メニューを見る</a></div><div class="slider"><div class="slides"><div class="ph" data-label="スライド写真1" data-size="1200×800px（横長）"><img src="images/slide-1.jpg" alt="店内の写真1" onerror="this.remove()"></div><div class="ph" data-label="スライド写真2" data-size="1200×800px（横長）"><img src="images/slide-2.jpg" alt="店内の写真2" onerror="this.remove()"></div><div class="ph" data-label="スライド写真3" data-size="1200×800px（横長）"><img src="images/slide-3.jpg" alt="店内の写真3" onerror="this.remove()"></div></div><div class="dots"><span></span><span></span><span></span></div></div></div></header>
+<div class="cta-row"><a class="btn" href="#contact">お問い合わせ</a></div><div class="slider"><div class="slides"><div class="ph" data-label="スライド写真1" data-size="1200×800px（横長）"><img src="images/slide-1.jpg" alt="店内の写真1" onerror="this.remove()"></div><div class="ph" data-label="スライド写真2" data-size="1200×800px（横長）"><img src="images/slide-2.jpg" alt="店内の写真2" onerror="this.remove()"></div><div class="ph" data-label="スライド写真3" data-size="1200×800px（横長）"><img src="images/slide-3.jpg" alt="店内の写真3" onerror="this.remove()"></div></div><div class="dots"><span></span><span></span><span></span></div></div></div></header>
 <div class="minsa"></div>
 <section id="today"><div class="wrap"><span class="eyebrow">TODAY</span><h2 class="title">本日の営業</h2>
 <div class="today" id="today-box"><div class="today-date" id="today-date"></div><div class="today-main"><svg class="shisa shisa-l" viewBox="0 0 140 130" role="img" aria-label="お酒を持ったシーサー（口を閉じたメス）">
@@ -106,14 +104,11 @@ footer{background:var(--deep);color:#e0bfb2;text-align:center;font-size:12px;pad
 <a class="insta-card" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><span class="insta-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></span><div><strong>@wy.wy._world</strong><span>お店の最新情報はInstagramで発信しています</span></div></a>
 <div class="insta-posts" id="insta-posts"></div>
 <a class="btn insta-link" href="https://www.instagram.com/wy.wy._world/" target="_blank" rel="noopener">Instagramを見る</a></div></section>
-<section id="menu"><div class="wrap"><span class="eyebrow">MENU</span><h2 class="title">メニュー</h2><div style="margin-top:22px">
-<div class="menu-boards"><div class="ph menu-board" data-label="メニュー画像1" data-size="1080×1350px（縦長）"><img src="images/menu-1.jpg" alt="メニュー画像1" loading="lazy" onerror="this.remove()"></div><div class="ph menu-board" data-label="メニュー画像2" data-size="1080×1350px（縦長）"><img src="images/menu-2.jpg" alt="メニュー画像2" loading="lazy" onerror="this.remove()"></div></div>
-</div></div></section>
-<section class="reasons"><div class="wrap faq"><span class="eyebrow">FAQ</span><h2 class="title">よくある質問</h2><div style="margin-top:16px">
+<section><div class="wrap faq"><span class="eyebrow">FAQ</span><h2 class="title">よくある質問</h2><div style="margin-top:16px">
 <details open><summary>初めてでも大丈夫ですか？</summary><div class="a">はい。初めての方も、お気軽にお越しください。</div></details>
 <details><summary>予約は必要ですか？</summary><div class="a">詳しくはお電話でお問い合わせください。</div></details>
 <details><summary>支払い方法は？</summary><div class="a">現金のみご利用いただけます。</div></details></div></div></section>
-<section id="access"><div class="wrap"><span class="eyebrow">ACCESS</span><h2 class="title">アクセス</h2>
+<section class="reasons" id="access"><div class="wrap"><span class="eyebrow">ACCESS</span><h2 class="title">アクセス</h2>
 <dl class="access-info"><dt>住所</dt><dd>〒901-1204 沖縄県南城市大里稲嶺2013-25</dd><dt>電話</dt><dd><a href="tel:0989450006" style="color:inherit">098-945-0006</a></dd><dt>定休日</dt><dd>水、日</dd><dt>営業時間</dt><dd>20時〜4時</dd></dl>
 <p class="access-note">詳しくはInstagramに載せてます。</p>
 <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.8092733477865!2d127.74095459999998!3d26.1703403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56edf3de465d3%3A0xa14b2f391534f838!2z44CSOTAxLTEyMDQg5rKW57iE55yM5Y2X5Z-O5biC5aSn6YeM56iy5ba677yS77yQ77yR77yT4oiS77yS77yV!5e0!3m2!1sja!2sjp!4v1791468558974!5m2!1sja!2sjp" title="ワイワイワールドの地図" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
